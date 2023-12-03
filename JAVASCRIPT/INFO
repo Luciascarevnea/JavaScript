@@ -1,0 +1,35 @@
+JavaScript (ECMAScript/ES)
+
+Web programming language appeared in 1995
+
+- Front end- predomina in front end
+- Back end- aici predomină mai puțin
+- General Purpose(scop general-aplicatii web, mobile, extensii browser)
+
+HTML-structura
+CSS- stil, stilizare
+JS- logică si comportament
+
+Domenii de aplicare(Front End)
+- interactivity
+- dynamic content
+- data processing
+- data exchange
+- effects
+- animations
+- etc ...
+
+
+Biblioteci front end:
+jquery
+Vue, react, angular, ...
+
+
+## General Aspects
+
+* Dynamic typed
+* Functional programming
+* Object orient programming
+* prototyping
+* scrierea codului structurat- constructii speciale
+* ...
