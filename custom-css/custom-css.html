@@ -1,0 +1,30 @@
+<script>
+    // display a square  with color + size from prompt()
+    // Aici apostroful ` ajuta ca sa folosim un text in
+    // mai multe randuri ca sa nu se contrazica cu gilimelele
+
+    color = prompt("Enter box color name or code")
+    size  = prompt("Enter box size in pixels")
+    borderColor = prompt("Enter border color name or code")
+    borderSize = prompt("Enter border size in pixels")
+
+    // !!! String
+    // "..."   -nu poti sa scrii text in mai multe rinduri
+    // '...'   -nu poti sa scrii text in mai multe rinduri
+    // `...`   -poti pune textul in mai multe rinduri
+    // poti sa pui simbolul ${color} in loc de apostroafe 
+    
+    document.write(
+        // template
+        `<div style="
+            background-color: ${color}; 
+            border: ${borderSize}px solid ${borderColor};
+            width: ${size}px; 
+            height: ${size}px;"
+        >
+            BOX
+        </div>`
+    )
+
+    //hw: user-> prompt 
+</script>
