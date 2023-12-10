@@ -1,0 +1,27 @@
+<script>
+    // IN: our ap asks the user for the desired quantity
+    // FACT: we know the price for each item
+    // OUT: total cost
+
+    // data
+    foodName          = "Salad"    // String
+    foodPriceValue    = 15.00      // Number
+    foodPriceUnites   = "MDL"      // String
+    foodDeliveryPrice = 30.00      // Number
+    foodDeliverUnites = "MDL"      // String
+
+    clientQuantity   = prompt(
+        "MENU\n\n" + foodName + "\n\nHow many?"
+    )
+
+    totalCost        = foodPriceValue * clientQuantity + foodDeliveryPrice
+
+    alert(
+        "you've ordered " + clientQuantity + 
+        "\n\ndelivery price " + foodDeliveryPrice + foodDeliverUnites + 
+        "\nbill " + totalCost + foodPriceUnites
+    )
+
+    //hw: sa setam o taxa de livrare
+</script>
+
