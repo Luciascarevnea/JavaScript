@@ -9,18 +9,21 @@
     foodPriceUnites   = "MDL"      // String
     foodDeliveryPrice = 30.00      // Number
     foodDeliverUnites = "MDL"      // String
+    foodAvailQ        = 10         // Number
 
     clientQuantity   = prompt(
         "MENU\n\n" + foodName + "\n\nHow many?"
     )
 
     totalCost        = foodPriceValue * clientQuantity + foodDeliveryPrice
-
+    
     alert(
         "you've ordered " + clientQuantity + 
         "\n\ndelivery price " + foodDeliveryPrice + foodDeliverUnites + 
         "\nbill " + totalCost + foodPriceUnites
     )
+
+    
 
     //hw: sa setam o taxa de livrare
 </script>

@@ -1,0 +1,32 @@
+
+<script>
+ foodName          = "Salad";        // String
+ foodPriceValue    = 15.00;          // Number
+ foodPriceUnites   = "MDL";          // String
+ foodDeliveryPrice = 30.00;          // Number
+ foodDeliverUnites = "MDL";          // String
+ foodAvailQ        = 10;             // Number
+
+clientQuantity     = prompt(
+    "MENU\n\n" + foodName + "\n\nHow many?"
+)
+
+totalCost          = foodPriceValue * clientQuantity + foodDeliveryPrice
+
+if (foodAvailQ >= clientQuantity) {
+    totalCost = foodPriceValue * clientQuantity
+
+    if (clientQuantity >= 1 && clientQuantity <= 10) {
+        alert(
+            "Total Cost: " + totalCost + foodPriceUnites +
+            "\nYou have free delivery!"
+        )
+
+    } else {
+        alert("Total Cost: " + totalCost + foodPriceUnites)
+    }
+} else {
+    alert("Sorry, we can offer only: " + foodAvailQ)
+}
+
+</script>
