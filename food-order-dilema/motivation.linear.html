@@ -1,0 +1,21 @@
+<!--FOOD ORDER dilema-->
+<script>
+
+    //LINEAR
+    foodName   = "Salad" //String
+    foodPrice  = 15.00   //Number
+    foodAvailQ = 5       //Number
+
+    clientQ    = parseInt( prompt("How many " + foodName + "do you want ?"))
+
+    // Here - decision?
+    if  (foodAvailQ >= clientQ) {
+        cost = foodPrice * clientQ
+        alert("Total cost: " + cost)
+    } else {
+        alert( "Sorry, we can offer only: " + foodAvailQ )
+    }
+
+    //HW1: 
+    
+</script>
