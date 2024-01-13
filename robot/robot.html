@@ -1,0 +1,92 @@
+<!--
+    make a robot that moves in 4 directions:
+    - id as variable
+    - $0 este variabila- un element selectat in inspector
+    -execute js on click
+    - increment/decrement
+    -template string / variabile interpolation
+    - operator ternar formula:
+        condition ? execute_if_true: execute_if_false
+    - termary ?: operator
+    
+
+    ELEMENT ---- > object/structure
+
+    element
+       \
+    +-----------ELEMENT-------------+
+    |                               |
+    |                               |
+    |        innerHTML   <-----------------------
+    |                               |
+    +-------------------------------+
+     > atributes: element.atribute
+     > HTML content: element.innerHTML
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOVING ROBOT</title>
+    <style>
+        #box{
+            width: 400px;
+            height: 400px;
+            border: 3px solid black;
+            margin: auto;
+        }
+        #box .robot{
+            background-color: red;
+            width: 50px;
+            height: 50px;
+        }
+        #controls{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="robot">
+        </div>
+    </div>
+
+    <script>
+        left = 0
+    </script>
+    
+    <div id="controls">
+        
+        <div>
+            <button>UP</button>
+        </div>
+
+        <div>
+            <!--cand pune o variabila, numar si dupa ++
+             el se va mai mari cu o unitate de ex: x=10, x++= 11
+              si invers x--= 10 va scadea-->
+            <button>LEFT</button>
+            <button 
+                onclick="
+                    // js code
+                    // 1. incrase the coordinate
+                    left += 10
+                    // 1.b limits
+                    left > 350 ? left = 350: null
+                    // 2. rander in the box
+                    box.innerHTML = `<div class='robot' style='margin-left: ${left}px'></div>`
+                "
+            >RIGHt</button>
+        </div>
+
+        <div>
+            <button>DOWN</button>
+        </div>
+
+    </div>
+    
+</body>
+</html>
