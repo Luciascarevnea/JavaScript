@@ -1,0 +1,47 @@
+<script>
+    grade = parseInt( prompt("Your grade please: ") )
+    // HW2: 
+    // what would result 
+    // parseInt( 9.9 )
+    // parseInt( 9.1 )
+    // parseInt( 9.5 )
+    // parseInt( 9.59 )
+
+    // La toate rezultatul va fi 9, pentru ca `parseInt` elimina
+    // partea de dupa virgula si returneaza partea intreaga.
+
+    LIMIT = 7 || 8
+
+    //if(grade>=  LIMIT ) {
+    //    alert("GOOD!")
+    //}   else{
+    //    alert("BAD!")
+    //}
+    //                |--If---->   
+    // grade -x-------x--A----x>
+    //        1              10
+    // <--------else--|
+
+    // HW3:
+    // 1...4 - VERY BAD
+    // 5...6 - BAD
+    // 7...8 - OK
+    // 9     - GOOD
+    // 10    - EXCELLENT
+
+    // HINT:
+
+    if (grade == 7 || grade == 8) {
+        alert("OK!")
+    } else if (grade >= 1 && grade <= 4) {
+        alert("VERY BAD!")
+    } else if (grade == 5 || grade == 6) {
+        alert("BAD!")
+    } else if (grade == 9) {
+        alert("GOOD!")
+    } else if (grade >= 10) {
+        alert("EXCELLENT!")
+    }
+ 
+    
+</script>
