@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INPUT VALIDATION / BRANCHING</title>
+</head>
+<body>
+
+    <input 
+        id="inputPhone"
+        size="30" 
+        tipe="text" 
+        placeholder="enter your phone number"
+    >
+
+    <button onclick="validate()">GO</button>
+    <!--
+        VALIDATION:
+        +373-22-123456
+        +373-6123456
+
+        JS:
+        - DOM- cand interactioneaza js cu variabile
+        - functions
+        - variables
+        - if/else
+        - String methods
+    -->
+    <script>
+        function validate() {
+            let fullNumber = inputPhone.value
+            // multi level validation
+            if (fullNumber.startsWith('+373-')){
+                let regionalNumber = fullNumber.substring(5)
+                if (regionalNumber.startsWith('22-')){
+                     // 123456
+                    let number = regionalNumber.substring(3)
+                    if (
+                        '0' <= number[0] && number[0] <= '9' &&
+                        '0' <= number[1] && number[1] <= '9' &&
+                        '0' <= number[2] && number[2] <= '9' &&
+                        '0' <= number[3] && number[3] <= '9' &&
+                        '0' <= number[4] && number[4] <= '9' &&
+                        '0' <= number[5] && number[5] <= '9' 
+                    ) {
+                        alert("SUCCES!")
+                    }   else{
+                            alert('ERROR: Wrong number format!')
+                        }
+                    
+                } else if(regionalNumber.startsWith('6')){
+                    let mobileNumber = regionalNumber.substring(1)
+
+                    if(
+                        '0' <= mobileNumber[0] && mobileNumber[0] <= '9' &&
+                        '0' <= mobileNumber[1] && mobileNumber[1] <= '9' &&
+                        '0' <= mobileNumber[2] && mobileNumber[2] <= '9' &&
+                        '0' <= mobileNumber[3] && mobileNumber[3] <= '9' &&
+                        '0' <= mobileNumber[4] && mobileNumber[4] <= '9' &&
+                        '0' <= mobileNumber[5] && mobileNumber[5] <= '9'
+                    ){
+                        alert("SUCCESS!")
+                    } else {
+                        alert('ERROR: Wrong mobile number format!')
+                    }    
+                } else {
+                    alert('ERROR: Only Chisinau numbers allowed')
+                }
+                
+            } else{
+                alert("ERROR: Only Moldova number allowed!")
+            } 
+                
+        }
+    </script>
+</body>
+</html>
