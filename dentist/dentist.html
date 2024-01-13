@@ -1,0 +1,53 @@
+<script>
+    // global variables
+    let cost = 0
+    const discount = 20 // %
+
+    let serviceOneSelected = confirm("1. Teeth whitening ?")
+    if (serviceOneSelected) { // == true
+        cost += 500
+    }
+
+    let serviceTwoSelected = confirm("2. Tooth correction ?")
+    if (serviceTwoSelected) { // == true
+        cost += 1500
+    }
+
+    let serviceThreeSelected = confirm("3. Teeth extraction ?")
+    if (serviceThreeSelected) { // == true
+        cost += 1000
+    }
+
+    let totalCost = cost
+
+    if (totalCost >= 2000) { 
+        let discountedCost = (100 - discount) * totalCost / 100
+        alert(
+            "Total cost " + cost + "\n" +
+            "discount % " + discount + "\n" + 
+            "cost with discount " + discountedCost
+        )
+    }   else {
+        alert(
+            "Total cost: " + totalCost + "\n" +
+            "No discount applied."
+        ) 
+    }       
+    
+    // HW 1: 
+    // SA SE APLICE DISCOUNTUL DOAR DACA SUMA ESTE MAI MARE DE 2000
+
+</script>
+
+<!--
+    +------------------global--------------+
+    |       cost = 0                       |
+    |       +--------local---------+       |
+    |       | cost += 500          |       |
+    |       |                      |       |
+    |       +----------------------+       |
+    |       alert(cost)                    |
+    +--------------------------------------+
+
+
+-->
