@@ -1,0 +1,25 @@
+<!--
+    album of 9 pictures
+-->
+
+<script>
+   let i = 1
+
+   while (i <= 9 ){
+       document.write(`<!--${i} start-->`)
+       document.write(`
+           <img src="images/${i}-300x300.jpg">
+       `)
+
+       if(i == 3 || i==6){
+          document.write(`<br>`)
+       }
+
+       document.write(`<!--${i} end-->`)
+       i++
+
+       //use variable "i"
+   }
+</script>
+
+<img src="images/1013-300x300.jpg">
