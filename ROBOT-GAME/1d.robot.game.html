@@ -1,0 +1,66 @@
+
+
+
+
+<button onclick="moveLeft(); drawMap()">◄</button>
+<span id="gameMap"></span>
+<button onclick="moveRight(); drawMap()">►</button>
+
+<script>
+// de creat o functie   
+const LEN = 20    
+
+// <--------------x---------------->
+
+let    rx = 10
+let direction = "right"
+
+"┄"
+
+function drawMap() {
+    const gameMap = document.getElementById('gameMap')
+    gameMap.innerHTML = ""
+    for(let x=1; x<=LEN; x++){
+        if( x === rx){
+            if(direction === "left"){
+                gameMap.innerHTML += "◄"
+            } else{
+                gameMap.innerHTML += "►"
+            }
+        } else{
+            gameMap.innerHTML += "┄"
+        }
+           
+    }
+
+}
+
+
+
+function moveLeft() {
+    if (rx > 1) {
+        rx--
+        direction = "left"
+    }
+}
+
+function moveRight() {
+    if (rx < LEN) {
+        rx++
+        direction = "right"
+    }
+}
+
+
+drawMap()
+
+</script>
+
+
+
+<!--
+    `document.getElementById` este o metodă în JavaScript care este folosită pentru a obține o referință către un element HTML din document,
+    pe baza valorii sale de atribut id. Acest ID trebuie să fie unic în interiorul documentului. Iată cum se folosește:
+    Unde 'id_element' este valoarea atributului id al elementului pe care dorești să-l obții. 
+    Această metodă returnează elementul cu ID-ul specificat sau null dacă nu a fost găsit niciun element cu acel ID
+-->
