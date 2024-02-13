@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SUN RISE EXAMPLE</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <div id="sky">
+        <div id="sun"></div>
+    </div>
+
+    <div id="controls">
+        <!--<input 
+            id="inputHour"
+            type="text" 
+            placeholder="Enter hour..."
+            onkeyup="adjustSun()"
+            
+        > -->
+        <input 
+        id="inputHour"
+        type="range"
+        min="6"
+        max="18"
+        step="1"
+        onchange="adjustSun()"
+    > Select hour
+    </div>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+<!--
+USER ---- > active elements (button, select, input, textarea, ...)
+                                |
+                                v
+                    sun elevation & color & sky color
+
+
+
+
+  6:00                   12:00             18:00
+  x----------------------x------------------x-->                 
+--->
+
+
+
